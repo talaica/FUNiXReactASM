@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Home from './HomeComponent';
 import List from './StaffListComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
-import { STAFFS } from '../shared/staffs';
+import { DEPARTMENTS, STAFFS } from '../shared/staffs';
 import StaffDetail from './staffdetailComponent';
+import Department from './Department';
 import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends Component {
@@ -13,7 +13,8 @@ class Main extends Component {
         super(props);
 
         this.state = {
-            staffs: STAFFS
+            staffs: STAFFS,
+            depts: DEPARTMENTS,
         };
     }
 
@@ -30,8 +31,8 @@ class Main extends Component {
                 <Switch>
                     <Route exact path="/list" component={() => <List staffs={this.state.staffs} />} />
                     <Route path="/list/:staffId" component={StaffWithId} />
-                    {/* <Route exact path="/department" />
-                    <Route exact path="/salary" /> */}
+                    <Route exact path="/department" component={() => <Department depts={this.state.depts} />} />
+                    <Route exact path="/salary" />
                     <Redirect to="/list" />
                 </Switch>
                 <Footer />
