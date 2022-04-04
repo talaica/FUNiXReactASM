@@ -1,34 +1,29 @@
-import React, { Component } from 'react';
-import { Card, CardTitle } from 'reactstrap';
-import StaffDetail from './staffdetailComponent';
+import React from 'react';
+import { Card, CardImg, CardTitle, CardImgOverlay } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-var cardstyle = {
-    backgroundColor: 'rgb(146, 185, 252)',
-    fontWeight: "bolder",
-};
+// var cardstyle = {
+//     backgroundColor: 'rgb(146, 185, 252)',
+//     fontWeight: "bolder",
+// };
 
-class Stafflist extends Component {
+function RenderListItem({staff,onClick}) {
+    return(
+        <Card key={staff.id}>
+            <Link to={`/list/${staff.id}`}>
+                <CardImg width="100%" src={staff.image} alt={staff.name} />
+                    <CardTitle>{staff.name}</CardTitle>
+            </Link>
+        </Card>
+    );
+}
 
-    constructor(props) {
-        super(props);
+const List = (props) => {
 
-        this.state = {
-            selectedStaff: null
-        }
-    }
-
-    onStaffSelect(staff) {
-        this.setState({ selectedStaff: staff});
-    }
-
-
-    render() {
-        const list = this.props.staffs.map((staff) => {
+        const list = props.staffs.map((staff) => {
             return (
-                <div key={staff.id} className="col-12 col-md-6 col-lg-4 mt-3">
-                    <Card onClick={() => this.onStaffSelect(staff)} style={cardstyle}>
-                        <CardTitle>{staff.name}</CardTitle>
-                    </Card>
+                <div className="col-6 col-md-4 col-lg-2 mt-2">
+                    <RenderListItem staff={staff} />
                 </div>
             );
         });
@@ -36,16 +31,18 @@ class Stafflist extends Component {
         return (
             <div className='container'>
                 <div className="row">
-                    {list}
+                    <div className="col-12">
+                        <h3>Nhân viên</h3>
+                        <hr />
+                    </div>
                 </div>
-                <div>
-                <StaffDetail staff={this.state.selectedStaff} />
+                <div className="row">
+                    {list}
                 </div>
             </div>
         );
     }
 
     
-}
 
-export default Stafflist;
+export default List;
