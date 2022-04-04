@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 //     fontWeight: "bolder",
 // };
 
-function RenderListItem({staff,onClick}) {
+function RenderListItem({staff}) {
     return(
         <Card key={staff.id}>
             <Link to={`/list/${staff.id}`}>
                 <CardImg width="100%" src={staff.image} alt={staff.name} />
-                    <CardTitle>{staff.name}</CardTitle>
+                    <CardTitle className="staff-card">{staff.name}</CardTitle>
             </Link>
         </Card>
     );
