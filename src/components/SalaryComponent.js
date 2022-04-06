@@ -18,13 +18,13 @@ class Salary extends Component {
             const salary = Number(staff.salaryScale) * 3000000 + Number(staff.overTime)/8*200000;
             return(
                 <div className="col-12 col-md-6 col-lg-4 mt-2">
-                <Card key={staff.id}>
-                    <CardTitle>{staff.name}</CardTitle>
+                <Card key={staff.id} className="cards">
+                    <CardTitle  className="cardtitle">{staff.name}</CardTitle>
                         <CardBody>
                             <CardText>Mã nhân viên: {staff.id}</CardText>
                             <CardText>Hệ số lương: {staff.salaryScale}</CardText>
                             <CardText>Số giờ làm thêm: {staff.overTime}</CardText>
-                            <Button>Lương: {salary} </Button>
+                            <Button className="button">Lương: {salary.toFixed(0)} </Button>
                         </CardBody>
                 </Card>
                 </div>
@@ -37,7 +37,7 @@ class Salary extends Component {
                 <BreadcrumbItem><Link to="/list">Nhân viên</Link></BreadcrumbItem>
                 <BreadcrumbItem active>Bảng Lương</BreadcrumbItem>
             </Breadcrumb>
-            <div className="row">
+            <div className="row cardstyle">
                     {salarycard}
             </div>
         </div>

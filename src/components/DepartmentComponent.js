@@ -17,8 +17,8 @@ class Department extends Component {
 
         return(
                 <div className="col-12 col-md-6 col-lg-4">
-                    <Card key={dept.id} className="dept">
-                        <CardTitle className="cardtitle"><{dept.name}</CardTitle>
+                    <Card key={dept.id} className="cards">
+                        <CardTitle className="cardtitle"> {dept.name}</CardTitle>
                         <br />
                         <CardText> Số lượng nhân viên: {dept.numberOfStaff}</CardText>
                     </Card>
@@ -28,7 +28,7 @@ class Department extends Component {
     
     return(
         <div className="container">
-            <div className="row dept-card">
+            <div className="row cardstyle">
                 {dept}
             </div>
         </div>

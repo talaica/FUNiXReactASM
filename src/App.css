@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: rgb(219, 225, 236);
+    background-color: rgb(242, 239, 245);
 }
 
 .staff-card {
@@ -18,13 +18,23 @@ body {
   color: #2f2035;
 }
 
-.dept {
+.cardtitle {
+  font-weight: bolder;
+  font-size: 150%;
+}
+
+.button {
+  width: 100%;
+}
+
+.cards {
+  background-color: rgb(236, 217, 245);
   border: 1px solid #b1154a;
   padding-left: 5%;
   margin-top: 5%;
 }
 
-.dept-card {
+.cardstyle {
   font-size: larger;
   padding: 2%;
 }
@@ -33,7 +43,6 @@ body {
       font-weight: bolder;
       font-size: larger;
   }
-
 
   .App-logo {
     height: 40vmin;
