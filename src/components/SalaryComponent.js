@@ -17,6 +17,7 @@ class Salary extends Component {
         const salarycard = this.props.staffs.map((staff) => {
             const salary = Number(staff.salaryScale) * 3000000 + Number(staff.overTime)/8*200000;
             return(
+                <div className="col-12 col-md-6 col-lg-4 mt-2">
                 <Card key={staff.id}>
                     <CardTitle>{staff.name}</CardTitle>
                         <CardBody>
@@ -26,6 +27,7 @@ class Salary extends Component {
                             <Button>Lương: {salary} </Button>
                         </CardBody>
                 </Card>
+                </div>
             );
         });
 
@@ -36,9 +38,7 @@ class Salary extends Component {
                 <BreadcrumbItem active>Bảng Lương</BreadcrumbItem>
             </Breadcrumb>
             <div className="row">
-                <div className="col-12 col-md-6 col-lg-4">
                     {salarycard}
-                </div>
             </div>
         </div>
         );
