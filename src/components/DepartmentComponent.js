@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardText, CardTitle } from 'reactstrap';
+import { Card, CardText, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class Department extends Component {
 
@@ -28,6 +29,10 @@ class Department extends Component {
     
     return(
         <div className="container">
+            <Breadcrumb>
+                <BreadcrumbItem><Link to="/list"><i>Nhân viên</i></Link></BreadcrumbItem>
+                <BreadcrumbItem active><i>Bảng Lương</i></BreadcrumbItem>
+            </Breadcrumb>
             <div className="row">
                     <div className="col-12">
                         <h3>Phòng ban</h3>

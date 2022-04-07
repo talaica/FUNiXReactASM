@@ -23,8 +23,8 @@ class StaffDetail extends Component {
                 return(
                     <div className="container">
                             <Breadcrumb>
-                                <BreadcrumbItem><Link to="/list">Nhân viên</Link></BreadcrumbItem>
-                                <BreadcrumbItem active>{staff.name}</BreadcrumbItem>
+                                <BreadcrumbItem><Link to="/list"><i>Nhân viên</i></Link></BreadcrumbItem>
+                                <BreadcrumbItem active><i>{staff.name}</i></BreadcrumbItem>
                             </Breadcrumb>
                         <div className="row">
                                 <div className="col-12 col-md-4 col-lg-3">

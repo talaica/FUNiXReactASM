@@ -34,8 +34,8 @@ class Salary extends Component {
         return(
         <div className="container">
             <Breadcrumb>
-                <BreadcrumbItem><Link to="/list">Nhân viên</Link></BreadcrumbItem>
-                <BreadcrumbItem active>Bảng Lương</BreadcrumbItem>
+                <BreadcrumbItem><Link to="/list"><i>Nhân viên</i></Link></BreadcrumbItem>
+                <BreadcrumbItem active><i>Bảng Lương</i></BreadcrumbItem>
             </Breadcrumb>
             <div className="row">
                     <div className="col-12">
