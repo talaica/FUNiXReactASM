@@ -31,7 +31,7 @@ class Department extends Component {
         <div className="container">
             <Breadcrumb>
                 <BreadcrumbItem><Link to="/list"><i>Nhân viên</i></Link></BreadcrumbItem>
-                <BreadcrumbItem active><i>Bảng Lương</i></BreadcrumbItem>
+                <BreadcrumbItem active><i>Phòng ban</i></BreadcrumbItem>
             </Breadcrumb>
             <div className="row">
                     <div className="col-12">
