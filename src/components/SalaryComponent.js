@@ -37,6 +37,12 @@ class Salary extends Component {
                 <BreadcrumbItem><Link to="/list">Nhân viên</Link></BreadcrumbItem>
                 <BreadcrumbItem active>Bảng Lương</BreadcrumbItem>
             </Breadcrumb>
+            <div className="row">
+                    <div className="col-12">
+                        <h3>Bảng lương</h3>
+                        <hr />
+                    </div>
+                </div>
             <div className="row cardstyle">
                     {salarycard}
             </div>
